@@ -2,23 +2,17 @@
 
 import akshare as ak
 
-stock_news_em_df = ak.stock_news_em(symbol="000960")
-print(stock_news_em_df)
+news_data = ak.stock_news_em(symbol="603993")
+# news_data = ak.stock_news_em(symbol="洛阳钼业")
 
-print(stock_news_em_df.iloc[0])
-print(stock_news_em_df["新闻标题"].iloc[0])
-print(stock_news_em_df["发布时间"].iloc[0])
-print(repr(stock_news_em_df["新闻内容"].iloc[0]))
-print(stock_news_em_df["新闻链接"].iloc[0])
-print(stock_news_em_df.iloc[1])
-print(stock_news_em_df["新闻标题"].iloc[1])
-print(stock_news_em_df["发布时间"].iloc[1])
-print(repr(stock_news_em_df["新闻内容"].iloc[1]))
-print(stock_news_em_df["新闻链接"].iloc[1])
-print(stock_news_em_df.iloc[2])
-print(stock_news_em_df["新闻标题"].iloc[2])
-print(stock_news_em_df["发布时间"].iloc[2])
-print(repr(stock_news_em_df["新闻内容"].iloc[2]))
-print(stock_news_em_df["新闻链接"].iloc[2])
+print(news_data)
+
+for i in range(10):
+    print("\n ******")
+    print(news_data.iloc[i])
+    print(news_data["新闻标题"].iloc[i])
+    print(news_data["发布时间"].iloc[i])
+    print(news_data["新闻内容"].iloc[i])
+    print(news_data["新闻链接"].iloc[i])
 
 # uv run python AKShare/demo_stock_news.py 
